@@ -12,16 +12,20 @@ import Evento from './componentes/Evento'
 import Avo from './componentes/ComunicacaoDireta'
 import TextoSincronizado from './componentes/ComunicacaoIndireta'
 import ListaFlex from './componentes/ListaFlex'
+import Flex from './componentes/Flex'
 
-export default createDrawerNavigator ({
-//Instanciando funcao e classe
+export default createDrawerNavigator({
+    //Instanciando funcao e classe
+    Flex: {
+        screen: Flex
+    },
     ListaFlex: {
         screen: ListaFlex,
-        navigationOptions: { title: 'Lista Flex (Flex Box)'}
+        navigationOptions: { title: 'Lista Flex (Flex Box)' }
     },
     TextoSincronizado: {
         screen: TextoSincronizado,
-        navigationOptions: { title: 'Texto Sincronizado'}
+        navigationOptions: { title: 'Texto Sincronizado' }
     },
     Avô: {
         screen: () => <Avo nome='Joao' sobrenome='Silva' />
@@ -30,7 +34,7 @@ export default createDrawerNavigator ({
         screen: Evento
     },
     ValidarProps: {
-        screen: () => <ValidarProps ano={18} /> 
+        screen: () => <ValidarProps ano={18} />
     },
     Plataformas: {
         screen: () => <Plataformas />
@@ -47,7 +51,7 @@ export default createDrawerNavigator ({
     },
     ParImpar: {
         screen: () => <ParImpar numero={30} />,
-        navigationOptions: { title: 'Par & Impar'}
+        navigationOptions: { title: 'Par & Impar' }
     },
     Simples: {
         screen: () => <Simples texto='Flexivel' />,
